@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/main.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1686525654573,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1686525661182,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,3 @@\n-import animateTitle from './features/animateTitle'\r\n-import createBadge from './features/createBasge'\r\n import './styles/style.css'\r\n \r\n console.log('Welcome to Vite + JS + Webflow!')\r\n"
+                }
+            ],
+            "date": 1686525654573,
+            "name": "Commit-0",
+            "content": "import animateTitle from './features/animateTitle'\r\nimport createBadge from './features/createBasge'\r\nimport './styles/style.css'\r\n\r\nconsole.log('Welcome to Vite + JS + Webflow!')\r\n"
+        }
+    ]
+}
