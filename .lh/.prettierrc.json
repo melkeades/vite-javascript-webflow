@@ -1,0 +1,62 @@
+{
+    "sourceFile": ".prettierrc",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1686622160319,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1686622246806,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+{\r\n+  \"trailingComma\": \"es5\",\r\n+  \"tabWidth\": 2,\r\n+  \"semi\": false,\r\n+  // \"endOfLine\": \"auto\",\r\n+  \"singleQuote\": true\r\n+}\r\n"
+                },
+                {
+                    "date": 1686622252374,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,6 @@\n+{\r\n+  \"trailingComma\": \"es5\",\r\n+  \"tabWidth\": 2,\r\n+  \"semi\": false,\r\n+  \"singleQuote\": true\r\n+}\r\n"
+                },
+                {
+                    "date": 1686622262845,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,6 @@\n {\r\n-  \"trailingComma\": \"es5\",\r\n   \"tabWidth\": 2,\r\n   \"semi\": false,\r\n+  \"endOfLine\": \"auto\",\r\n   \"singleQuote\": true\r\n }\r\n-{\r\n-  \"trailingComma\": \"es5\",\r\n-  \"tabWidth\": 2,\r\n-  \"semi\": false,\r\n-  // \"endOfLine\": \"auto\",\r\n-  \"singleQuote\": true\r\n-}\r\n"
+                },
+                {
+                    "date": 1686622269244,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\r\n-  \"tabWidth\": 2,\r\n+  \"trailingComma\": \"es5\",\r\n   \"semi\": false,\r\n   \"endOfLine\": \"auto\",\r\n   \"singleQuote\": true\r\n }\r\n"
+                },
+                {
+                    "date": 1686622276947,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\r\n   \"trailingComma\": \"es5\",\r\n+  \"tabWidth\": 2,\r\n   \"semi\": false,\r\n-  \"endOfLine\": \"auto\",\r\n   \"singleQuote\": true\r\n }\r\n"
+                },
+                {
+                    "date": 1686622291083,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,6 @@\n+{\r\n+  \"trailingComma\": \"es5\",\r\n+  \"tabWidth\": 2,\r\n+  \"semi\": false,\r\n+  \"endOfLine\": \"auto\",\r\n+}\r\n"
+                },
+                {
+                    "date": 1686622325604,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,2 @@\n+{\r\n+  \"trailingComma\": \"es5\"}\r\n"
+                },
+                {
+                    "date": 1686622345977,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,6 @@\n+{\r\n+  \"trailingComma\": \"es5\",\r\n+  \"tabWidth\": 2,\r\n+  \"semi\": false,\r\n+  \"singleQuote\": true\r\n+}\r\n"
+                },
+                {
+                    "date": 1686622404629,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,20 +1,8 @@\n {\r\n   \"trailingComma\": \"es5\",\r\n   \"tabWidth\": 2,\r\n   \"semi\": false,\r\n-  \"singleQuote\": true\r\n-}\r\n-{\r\n-  \"trailingComma\": \"es5\"}\r\n-{\r\n-  \"trailingComma\": \"es5\",\r\n-  \"tabWidth\": 2,\r\n-  \"semi\": false,\r\n   \"endOfLine\": \"auto\",\r\n+  \"singleQuote\": true,\r\n+  \"printWidth\": 180\r\n }\r\n-{\r\n-  \"trailingComma\": \"es5\",\r\n-  \"tabWidth\": 2,\r\n-  \"semi\": false,\r\n-  \"singleQuote\": true\r\n-}\r\n"
+                },
+                {
+                    "date": 1686623036230,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+{\r\n+  \"trailingComma\": \"es5\",\r\n+  \"tabWidth\": 2,\r\n+  \"semi\": false,\r\n+  \"singleQuote\": true,\r\n+  \"printWidth\": 180\r\n+}\r\n"
+                },
+                {
+                    "date": 1686623278012,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,7 @@\n   \"trailingComma\": \"es5\",\r\n   \"tabWidth\": 2,\r\n   \"semi\": false,\r\n   \"singleQuote\": true,\r\n+  \"endOfLine\": \"auto\",\r\n   \"printWidth\": 180\r\n }\r\n"
+                }
+            ],
+            "date": 1686622160319,
+            "name": "Commit-0",
+            "content": ""
+        }
+    ]
+}

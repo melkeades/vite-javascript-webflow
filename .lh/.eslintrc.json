@@ -1,0 +1,34 @@
+{
+    "sourceFile": ".eslintrc",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1686592512820,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1686622674928,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,14 @@\n   },\r\n   \"extends\": [\"eslint:recommended\", \"plugin:prettier/recommended\"],\r\n   \"plugins\": [\"import\", \"sort-imports-es6-autofix\"],\r\n   \"rules\": {\r\n+    \"prettier/prettier\": [\r\n+  \"error\",\r\n+  {\r\n+    \"endOfLine\": \"auto\"\r\n+  }\r\n+],\r\n     \"no-unused-vars\": \"off\",\r\n     \"max-len\": [\r\n       \"error\",\r\n       {\r\n"
+                },
+                {
+                    "date": 1686622692651,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,13 +14,13 @@\n   \"extends\": [\"eslint:recommended\", \"plugin:prettier/recommended\"],\r\n   \"plugins\": [\"import\", \"sort-imports-es6-autofix\"],\r\n   \"rules\": {\r\n     \"prettier/prettier\": [\r\n-  \"error\",\r\n-  {\r\n-    \"endOfLine\": \"auto\"\r\n-  }\r\n-],\r\n+      \"error\",\r\n+      {\r\n+        \"endOfLine\": \"auto\"\r\n+      }\r\n+    ],\r\n     \"no-unused-vars\": \"off\",\r\n     \"max-len\": [\r\n       \"error\",\r\n       {\r\n"
+                },
+                {
+                    "date": 1686623065766,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,14 +13,9 @@\n   },\r\n   \"extends\": [\"eslint:recommended\", \"plugin:prettier/recommended\"],\r\n   \"plugins\": [\"import\", \"sort-imports-es6-autofix\"],\r\n   \"rules\": {\r\n-    \"prettier/prettier\": [\r\n-      \"error\",\r\n-      {\r\n-        \"endOfLine\": \"auto\"\r\n-      }\r\n-    ],\r\n+'prettier/prettier': ['error', { \"endOfLine\": \"auto\"}, { usePrettierrc: true }],  // Use our .prettierrc file as source\r\n     \"no-unused-vars\": \"off\",\r\n     \"max-len\": [\r\n       \"error\",\r\n       {\r\n"
+                },
+                {
+                    "date": 1686623087737,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,14 @@\n   },\r\n   \"extends\": [\"eslint:recommended\", \"plugin:prettier/recommended\"],\r\n   \"plugins\": [\"import\", \"sort-imports-es6-autofix\"],\r\n   \"rules\": {\r\n-    \"prettier/prettier\": [\"error\", { \"endOfLine\": \"auto\" }, { \"usePrettierrc\": true }], // Use our .prettierrc file as source\r\n+    \"prettier/prettier\": [\r\n+      \"error\",\r\n+      {\r\n+        \"endOfLine\": \"auto\"\r\n+      }\r\n+    ],\r\n     \"no-unused-vars\": \"off\",\r\n     \"max-len\": [\r\n       \"error\",\r\n       {\r\n"
+                }
+            ],
+            "date": 1686592512820,
+            "name": "Commit-0",
+            "content": "{\r\n  \"parser\": \"espree\",\r\n  \"root\": true,\r\n  \"parserOptions\": {\r\n    \"ecmaVersion\": 2021,\r\n    \"sourceType\": \"module\"\r\n  },\r\n  \"env\": {\r\n    \"es6\": true,\r\n    \"node\": true,\r\n    \"jest\": true,\r\n    \"browser\": true\r\n  },\r\n  \"extends\": [\"eslint:recommended\", \"plugin:prettier/recommended\"],\r\n  \"plugins\": [\"import\", \"sort-imports-es6-autofix\"],\r\n  \"rules\": {\r\n    \"no-unused-vars\": \"off\",\r\n    \"max-len\": [\r\n      \"error\",\r\n      {\r\n        \"code\": 180\r\n      }\r\n    ],\r\n    \"@typescript-eslint/explicit-module-boundary-types\": \"off\",\r\n    \"import/order\": [\r\n      \"error\",\r\n      {\r\n        \"groups\": [\r\n          [\"external\", \"builtin\"],\r\n          [\"index\", \"internal\", \"sibling\", \"parent\"]\r\n        ],\r\n        \"newlines-between\": \"always\",\r\n        \"alphabetize\": {\r\n          \"order\": \"asc\",\r\n          \"caseInsensitive\": true\r\n        }\r\n      }\r\n    ]\r\n  }\r\n}\r\n"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "sourceFile": ".vscode/.prettierrc",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1686623120041,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1686623120041,
+            "name": "Commit-0",
+            "content": "{\n  \"tabWidth\": 2,\n  \"useTabs\": false,\n  \"endOfLine\": \"auto\",\n  \"printWidth\": 180\n}\n"
+        }
+    ]
+}
