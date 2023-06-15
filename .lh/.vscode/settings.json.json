@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 2,
+            "activePatchIndex": 3,
             "patches": [
                 {
                     "date": 1686622972812,
@@ -16,6 +16,10 @@
                 {
                     "date": 1686775169824,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,11 @@\n   \"editor.formatOnSave\": true,\r\n   \"editor.codeActionsOnSave\": {\r\n     \"source.fixAll\": true\r\n   },\r\n-  \"eslint.validate\": [\"javascript\"]\r\n+  \"eslint.validate\": [\r\n+    \"javascript\"\r\n+  ],\r\n+  \"cSpell.words\": [\r\n+    \"gsap\"\r\n+  ]\r\n }\r\n"
+                },
+                {
+                    "date": 1686799326224,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,6 +4,9 @@\n   \"editor.codeActionsOnSave\": {\r\n     \"source.fixAll\": true\r\n   },\r\n   \"eslint.validate\": [\"javascript\"],\r\n-  \"cSpell.words\": [\"gsap\"]\r\n+  \"cSpell.words\": [\r\n+    \"Colcade\",\r\n+    \"gsap\"\r\n+  ]\r\n }\r\n"
                 }
             ],
             "date": 1686622972812,

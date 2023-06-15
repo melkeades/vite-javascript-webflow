@@ -1,7 +1,21 @@
 import './styles/style.css'
+import Colcade from 'colcade'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 
+// colcade -------------------
+const masonry = document.querySelector('.masonry')
+const masonryCol = document.createElement('div')
+masonryCol.className = 'grid-col'
+
+for (let i = 0; i < 4; i++) {
+  masonry.prepend(masonryCol.cloneNode(true))
+}
+const col = new Colcade('.masonry', {
+  columns: '.grid-col',
+  items: '.masonry__card',
+})
+// scrollTrigger
 gsap.registerPlugin(ScrollTrigger)
 
 const itemClassName = 'item-'
@@ -49,7 +63,7 @@ const topInfoListItem = infoList.reduce((top, element) => (top.offsetTop < eleme
 const bottomInfoListItem = infoList.reduce((top, element) => (top.offsetTop > element.offsetTop ? top : element)) // element with most offsetTop value
 
 ScrollTrigger.create({
-  markers: true,
+  // markers: true,
   trigger: infoList,
   start: 'top bottom',
   startTrigger: topInfoListItem,

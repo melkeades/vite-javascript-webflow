@@ -228,6 +228,11 @@ chalk@^4.0.0:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
 
+colcade@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/colcade/-/colcade-0.2.0.tgz#1d4c949d677655865089ba0b78769693beca0b32"
+  integrity sha512-ccbmKzL0iZZvR1MZeR7r8wIDRSGGQxZI27NyILMjH8F6zOK8Xf04fEVJi2ajUlVgvY1uIRKml5KqHUv1eewBZw==
+
 color-convert@^1.9.0:
   version "1.9.3"
   resolved "https://registry.yarnpkg.com/color-convert/-/color-convert-1.9.3.tgz#bb71850690e1f136567de629d2d5471deda4c1e8"
