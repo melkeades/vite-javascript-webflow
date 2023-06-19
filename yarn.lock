@@ -84,6 +84,11 @@
     estree-walker "^2.0.1"
     picomatch "^2.2.2"
 
+"@studio-freight/lenis@^1.0.16":
+  version "1.0.16"
+  resolved "https://registry.yarnpkg.com/@studio-freight/lenis/-/lenis-1.0.16.tgz#3a284461e1e252228bca544ce7191afede1af4ec"
+  integrity sha512-OeCBCafpaIfqFov4of/+cArunTL6wuN8hQkx3w/yJTh9Y84O82Y7tZ1xvU/HlvH+1M/tpltruxpddaI7ydTrnQ==
+
 "@types/json5@^0.0.29":
   version "0.0.29"
   resolved "https://registry.yarnpkg.com/@types/json5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
