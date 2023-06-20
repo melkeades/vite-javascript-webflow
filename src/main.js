@@ -39,10 +39,14 @@ const logosRevesedTl = horizontalLoop(logosReversed, {
   draggable: true,
   paddingRight: 30,
 })
-// lo.addEventListener('mouseenter', () => logosTl.pause())
-// lo.addEventListener('mouseenter', () => logosTl.timeScale(20))
-// lo.addEventListener('mouseenter', () => logosTl(logos, { speed: 20 }))
-// lo.addEventListener('mouseleave', () => logosTl.play())
+lo.addEventListener('mouseenter', () => {
+  logosTl.pause()
+  logosRevesedTl.pause()
+})
+lo.addEventListener('mouseleave', () => {
+  logosTl.play()
+  logosRevesedTl.reverse()
+})
 let clamp = gsap.utils.clamp(-60, 60),
   isOver,
   reversedOnPause
