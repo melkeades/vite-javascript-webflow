@@ -20,7 +20,7 @@ requestAnimationFrame(raf)
 gsap.registerPlugin(Observer, ScrollTrigger)
 
 // logos -------------------
-const lo = document.querySelector('.logos')
+const lo = document.querySelector('.logos__row-wrap')
 const logos = gsap.utils.toArray('.logos__row-wrap .logos__row:nth-child(odd) .logos__logo')
 const logosReversed = gsap.utils.toArray('.logos__row-wrap .logos__row:nth-child(even) .logos__logo')
 const logosTl = horizontalLoop(logos, {
