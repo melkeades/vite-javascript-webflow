@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 4,
+            "activePatchIndex": 5,
             "patches": [
                 {
                     "date": 1686592512820,
@@ -24,6 +24,10 @@
                 {
                     "date": 1686623087737,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,14 @@\n   },\r\n   \"extends\": [\"eslint:recommended\", \"plugin:prettier/recommended\"],\r\n   \"plugins\": [\"import\", \"sort-imports-es6-autofix\"],\r\n   \"rules\": {\r\n-    \"prettier/prettier\": [\"error\", { \"endOfLine\": \"auto\" }, { \"usePrettierrc\": true }], // Use our .prettierrc file as source\r\n+    \"prettier/prettier\": [\r\n+      \"error\",\r\n+      {\r\n+        \"endOfLine\": \"auto\"\r\n+      }\r\n+    ],\r\n     \"no-unused-vars\": \"off\",\r\n     \"max-len\": [\r\n       \"error\",\r\n       {\r\n"
+                },
+                {
+                    "date": 1687232821237,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n     \"no-unused-vars\": \"off\",\r\n     \"max-len\": [\r\n       \"error\",\r\n       {\r\n-        \"code\": 180\r\n+        \"code\": 580\r\n       }\r\n     ],\r\n     \"@typescript-eslint/explicit-module-boundary-types\": \"off\",\r\n     \"import/order\": [\r\n"
                 }
             ],
             "date": 1686592512820,

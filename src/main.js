@@ -2,7 +2,10 @@ import './styles/style.css'
 import Lenis from '@studio-freight/lenis'
 import Colcade from 'colcade'
 import gsap from 'gsap'
+import { Observer } from 'gsap/all'
 import ScrollTrigger from 'gsap/ScrollTrigger'
+
+import horizontalLoop from './horizontalLoop'
 
 const sel = (selector) => document.querySelector(selector)
 
@@ -13,6 +16,47 @@ function raf(time) {
 }
 
 requestAnimationFrame(raf)
+
+gsap.registerPlugin(Observer, ScrollTrigger)
+
+// logos -------------------
+const lo = document.querySelector('.logos')
+const logos = gsap.utils.toArray('.logos__row-wrap .logos__row:nth-child(odd) .logos__logo')
+const logosReversed = gsap.utils.toArray('.logos__row-wrap .logos__row:nth-child(even) .logos__logo')
+const logosTl = horizontalLoop(logos, {
+  speed: 0.2,
+  paused: false,
+  repeat: -1,
+  reversed: false,
+  draggable: true,
+  paddingRight: 30,
+})
+const logosRevesedTl = horizontalLoop(logosReversed, {
+  speed: 0.2,
+  paused: false,
+  repeat: -1,
+  reversed: true,
+  draggable: true,
+  paddingRight: 30,
+})
+// lo.addEventListener('mouseenter', () => logosTl.pause())
+// lo.addEventListener('mouseenter', () => logosTl.timeScale(20))
+// lo.addEventListener('mouseenter', () => logosTl(logos, { speed: 20 }))
+// lo.addEventListener('mouseleave', () => logosTl.play())
+let clamp = gsap.utils.clamp(-60, 60),
+  isOver,
+  reversedOnPause
+Observer.create({
+  target: document.scrollingElement,
+  type: 'scroll,wheel',
+  onChangeY: (self) => {
+    logosTl.timeScale(clamp(self.velocityY * 0.003))
+    logosRevesedTl.timeScale(clamp(self.velocityY * -0.003))
+    // if (isOver) {
+    //   gsap.to(logosTl, { timeScale: 0, duration: 1, overwrite: true })
+    // }
+  },
+})
 
 // colcade masonry -------------------
 const masonryCont = document.querySelector('.masonry')
@@ -29,7 +73,6 @@ const col = new Colcade('.masonry', {
 // scrollTrigger
 // #
 // reveal mask -------------------
-gsap.registerPlugin(ScrollTrigger)
 
 const revWrap = sel('.sec-reveal-wrap')
 const revCurtainWrap = sel('.sec-reveal__curtain-wrap')
