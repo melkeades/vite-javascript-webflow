@@ -14,23 +14,22 @@ function raf(time) {
 
 requestAnimationFrame(raf)
 
-// colcade masonry -------------------
-const masonryCont = document.querySelector('.masonry')
+// colcade -------------------
+const masonry = document.querySelector('.masonry')
 const masonryCol = document.createElement('div')
 masonryCol.className = 'grid-col'
 
 for (let i = 0; i < 4; i++) {
-  masonryCont.prepend(masonryCol.cloneNode(true))
+  masonry.prepend(masonryCol.cloneNode(true))
 }
 const col = new Colcade('.masonry', {
   columns: '.grid-col',
   items: '.masonry__card',
 })
 // scrollTrigger
-// #
+
 // reveal mask -------------------
 gsap.registerPlugin(ScrollTrigger)
-
 const revWrap = sel('.sec-reveal-wrap')
 const revCurtainWrap = sel('.sec-reveal__curtain-wrap')
 const revHorizontalWrap = sel('.sec-reveal__horizontal-wrap')
@@ -44,58 +43,46 @@ const revSec5 = sel('.sec-reveal--5')
 const revSec6 = sel('.sec-reveal--6')
 const revSec7 = sel('.sec-reveal--7')
 const revSec8 = sel('.sec-reveal--8')
-const revSec9 = sel('.sec-reveal--9')
+console.log(revWrap, revCurtainWrap, revHorizontalWrap, revFadeWrap, revClipWrap, revSec1, revSec2, revSec3, revSec4, revSec5, revSec6, revSec7, revSec8)
 
-gsap.set([revHorizontalWrap], { gridArea: '1/1', flexDirection: 'row', width: 'fit-content' })
-gsap.set([revFadeWrap], { zIndex: '5' })
-gsap.set([revSec1, revSec2, revSec5, revSec6, revSec7, revSec8, revSec9], { gridArea: '1/1' })
-const revSecTl = gsap.timeline({
-  defaults: { ease: 'none' },
-  scrollTrigger: {
-    startTrigger: revWrap,
-    start: 'top top',
-    endTrigger: revSec5,
-    end: '150% top', // speed
-    toggleActions: 'start none none reverse',
-    pin: revWrap,
-    scrub: true,
-  },
+gsap.set('.sec-slide-wrap', { position: 'sticky', paddingBottom: '100vh' })
+gsap.set('.sec-reveal--00', { position: 'absolute' })
+// gsap.set(revWrap, { marginTop: '100vh' })
+ScrollTrigger.create({
+  trigger: '.sec-slide-wrap',
+  start: 'top ',
+  end: 'bottom ',
+  scrub: true,
+  animation: gsap.to('.sec-reveal--00', { ease: 'none', yPercent: '-100' }),
+  // pin: true,
 })
-revSecTl
-  .to(revSec1, { yPercent: '-100' })
-  .to(revSec2, { yPercent: '-100' })
-  .to(revHorizontalWrap, {
-    xPercent: '-50',
-    onComplete: function () {
-      console.log('qwe')
-    },
-  })
-const revSec5Tl = gsap.timeline({
-  defaults: { ease: 'none' },
+ScrollTrigger.create({
+  trigger: '.sec-reveal--0',
+  start: 'top ',
+  end: 'bottom ',
+  scrub: true,
+  // pin: '.sec-reveal--0',
+  animation: gsap.fromTo('.sec-reveal--0 .sec-reveal__rt', { y: 50 }, { y: -50 }),
+})
+
+// create scrollTrigger that pins rev1Sec and reveals rev2Sec through growing mask attached to .sec-reveal__image
+const secRevealTl = gsap.timeline({
+  defaults: { ease: 'power1.in' },
   scrollTrigger: {
-    trigger: revFadeWrap,
+    trigger: revWrap,
     start: 'top top',
-    end: '200% top', // speed
+    end: '120% top', // speed
     toggleActions: 'start none none reverse',
+    onEnter: () => gsap.set('.sec-reveal--0', { opacity: 0, pointerEvents: 'none' }),
+    onLeaveBack: () => gsap.set('.sec-reveal--0', { opacity: 1 }),
     pin: true,
     scrub: true,
   },
 })
-gsap.set(revSec8, { clipPath: 'circle(0% at 75% 50%)' })
-revSec5Tl.to(revSec5, { opacity: 0 }).to(revSec6, { opacity: 0 }).to(revSec8, { clipPath: 'circle(100% at 75% 50%)' }).from(revSec9, { yPercent: '100' })
+gsap.set('.sec-reveal', { gridArea: '1/1' })
+gsap.set(rev2Sec, { clipPath: 'circle(0% at 75% 50%)' })
+secRevealTl.fromTo('.sec-reveal__rt', { y: 50 }, { y: -50 }).to(rev2Sec, { clipPath: 'circle(100% at 75% 50%)' }, '<1%')
 
-const masonryTl = gsap.timeline({
-  defaults: { ease: 'none' },
-  scrollTrigger: {
-    trigger: masonryCont,
-    start: 'top 80%',
-    end: 'bottom 50%',
-    scrub: 1,
-    // markers: true,
-    toggleActions: 'start none none reverse',
-  },
-})
-masonryTl.fromTo('.grid-col:nth-child(even)', { y: -20 }, { y: -100 }).to(masonryCont, { duration: 0.2, backgroundColor: 'black' }, '>-=0.2')
 // --------------------
 const itemClassName = 'item-'
 const imgClassName = 'img__item'
